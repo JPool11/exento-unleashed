@@ -92,7 +92,28 @@ function Index() {
             className="font-sans text-[10px] uppercase tracking-[0.42em]"
             style={{ color: "var(--muted-ink)" }}
           >
-            © Exento · Todos los derechos reservados
+            © Exento · Todos los derechos reservados 
+          </p>
+          <p className="font-sans text-[10px] uppercase tracking-[0.42em]"
+              style={{ color: "var(--muted-ink)" }}>
+          Powered by{" "}
+          <a
+            href="https://www.linkedin.com/in/jhan-pool-agudelo-triana-29500a225/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-primary-glow"
+          >
+            Jhan Pool Agudelo Triana 
+          </a>
+          {" | "}
+          <a
+            href="https://www.jpooltech.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-primary-glow"
+          >
+            JPool Tech.
+          </a>
           </p>
         </footer>
       </div>
