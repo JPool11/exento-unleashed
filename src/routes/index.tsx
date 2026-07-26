@@ -66,7 +66,7 @@ function Index() {
             className="mt-6 font-display text-lg italic md:text-xl"
             style={{ color: "var(--gold)" }}
           >
-            — sin reglas —
+            — Próximamente —
           </p>
 
           <p
