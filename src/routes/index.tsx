@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import logoWhite from "@/assets/exento-logo-white.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -56,7 +55,7 @@ function Index() {
           </div>
 
           <img
-            src={logoWhite.url}
+            src="/exento-logo-white.png"
             alt="Exento"
             className="mx-auto w-[min(78vw,620px)] select-none"
             draggable={false}
