@@ -153,3 +153,21 @@
     color: var(--color-foreground);
   }
 }
+
+/* Cursor personalizado (tenedor + cuchillo) */
+html.cutlery-cursor-active,
+html.cutlery-cursor-active * {
+  cursor: none !important;
+}
+
+html.cutlery-cursor-active .cutlery-cursor {
+  display: block;
+  transition: opacity 200ms ease-out;
+  filter: drop-shadow(0 2px 6px oklch(0 0 0 / 0.55));
+}
+
+@media (pointer: coarse) {
+  .cutlery-cursor {
+    display: none !important;
+  }
+}
