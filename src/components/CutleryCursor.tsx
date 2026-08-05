@@ -2,8 +2,9 @@ import { useEffect, useRef, useState } from "react";
 
 /**
  * Cursor personalizado: tenedor + cuchillo.
+ * - Posición vertical y paralelos uno al lado del otro.
  * - Hover sobre elementos interactivos: crece un poco.
- * - Click: los cubiertos se cierran como si cortaran.
+ * - Click: convergen en la parte superior y el cuchillo desliza hacia abajo como si cortara.
  */
 export function CutleryCursor() {
   const ref = useRef<HTMLDivElement>(null);
@@ -69,29 +70,30 @@ export function CutleryCursor() {
           fill="none"
           style={{ overflow: "visible" }}
         >
-          {/* Tenedor */}
+          {/* Tenedor — vertical y paralelo al cuchillo */}
           <g
-            className="transition-transform duration-150 ease-out"
+            className="transition-all duration-150 ease-out"
             style={{
-              transformOrigin: "23px 40px",
-              transform: `rotate(${cutting ? -4 : -20}deg)`,
+              transformOrigin: "17px 4px",
+              transform: `rotate(${cutting ? 10 : 0}deg)`,
             }}
             stroke="var(--gold)"
             strokeWidth="1.6"
             strokeLinecap="round"
           >
+            <path d="M13 4v9" />
             <path d="M17 4v9" />
             <path d="M21 4v9" />
-            <path d="M13 4v9" />
             <path d="M13 13h8c0 3-1.5 4.5-3 5v22" />
             <path d="M17 18v22" />
           </g>
-          {/* Cuchillo */}
+
+          {/* Cuchillo — vertical y paralelo al tenedor */}
           <g
-            className="transition-transform duration-150 ease-out"
+            className="transition-all duration-150 ease-out"
             style={{
-              transformOrigin: "23px 40px",
-              transform: `rotate(${cutting ? 4 : 20}deg)`,
+              transformOrigin: "29px 4px",
+              transform: `rotate(${cutting ? -10 : 0}deg) translateY(${cutting ? 10 : 0}px)`,
             }}
             stroke="var(--gold)"
             strokeWidth="1.6"
