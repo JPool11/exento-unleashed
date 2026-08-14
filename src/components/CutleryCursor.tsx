@@ -59,9 +59,10 @@ export function CutleryCursor() {
       className="cutlery-cursor pointer-events-none fixed left-0 top-0 z-[9999] hidden"
       style={{ opacity: visible ? 1 : 0 }}
     >
+      {/* Hotspot alineado a la punta de los cubiertos (no al centro del SVG) */}
       <div
-        className="relative -translate-x-1/2 -translate-y-1/2 transition-transform duration-200 ease-out"
-        style={{ transform: `translate(-50%, -50%) scale(${scale})` }}
+        className="relative transition-transform duration-200 ease-out"
+        style={{ transform: `translate(-50%, -8%) scale(${scale})` }}
       >
         <svg
           width="46"
