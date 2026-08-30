@@ -36,7 +36,7 @@ function CartaPage() {
         compact
       />
 
-      <div className="sticky top-[4.5rem] z-30 border-b border-gold-soft/20 bg-background/90 backdrop-blur-md">
+      <div className="sticky top-20 z-30 border-b border-gold-soft/20 bg-background/90 backdrop-blur-md">
         <nav
           className="mx-auto flex max-w-7xl gap-1 overflow-x-auto px-4 py-3 md:px-14"
           aria-label="Categorías de la carta"

@@ -90,7 +90,7 @@ export function BrandMark({ className }: { className?: string }) {
     <img
       src={siteConfig.logos.wordmarkLight}
       alt={siteConfig.name}
-      className={cn("h-8 w-auto select-none md:h-9", className)}
+      className={cn("h-14 w-auto select-none md:h-16", className)}
       draggable={false}
     />
   );

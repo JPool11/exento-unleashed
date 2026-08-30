@@ -45,7 +45,7 @@ export function Navbar() {
       >
         Saltar al contenido
       </a>
-      <div className="mx-auto flex h-[4.5rem] max-w-7xl items-center justify-between gap-6 px-5 md:px-10">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-6 px-5 md:px-10">
         <Link to="/" aria-label={`${siteConfig.name} — inicio`} className="shrink-0">
           <BrandMark />
         </Link>
@@ -103,7 +103,7 @@ export function Navbar() {
           <div className="flex h-full flex-col">
             <div className="flex items-center justify-between border-b border-gold-soft/20 px-6 py-5">
               <SheetTitle className="sr-only">Menú de navegación</SheetTitle>
-              <BrandMark className="h-7" />
+              <BrandMark className="h-12" />
               <button
                 type="button"
                 onClick={() => setOpen(false)}

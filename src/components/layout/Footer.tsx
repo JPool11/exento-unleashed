@@ -13,7 +13,7 @@ export function Footer() {
     <footer className="relative z-10 border-t border-gold-soft/20 px-6 pb-10 pt-16 md:px-14">
       <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-4">
         <div className="md:col-span-1">
-          <BrandMark className="h-10" />
+          <BrandMark className="h-20 md:h-24" />
           <p className="mt-5 max-w-xs font-display text-lg italic leading-relaxed text-ivory/90">
             Gastrobar, restaurante y celebraciones. Sin reglas, con cuidado.
           </p>
