@@ -3,6 +3,8 @@
  * Completar campos vacíos con información oficial — no inventar datos.
  */
 
+const addressCoords = { lat: 2.264519, lng: -75.7994543 } as const;
+
 export const siteConfig = {
   name: "Exento",
   tagline: "Sin Reglas",
@@ -30,12 +32,10 @@ export const siteConfig = {
     country: "Colombia",
     // SEO comercial usa Neiva como referencia de mercado (ver títulos).
     seoCity: "Neiva",
-    lat: 2.264519,
-    lng: -75.7994543,
+    ...addressCoords,
     mapUrl:
       "https://www.google.com/maps/place/Exento+-+Sin+Reglas/@2.264519,-75.7994543,17z/data=!3m1!4b1!4m6!3m5!1s0x8e25293661fd2975:0x67d0d6d37dd179c7!8m2!3d2.264519!4d-75.7994543!16s%2Fg%2F11nvfdptr2?hl=es-419",
-    mapsEmbedUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d996.6!2d-75.7994543!3d2.264519!2m3!1f0!2f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e25293661fd2975%3A0x67d0d6d37dd179c7!2sExento%20-%20Sin%20Reglas!5e0!3m2!1ses-419!2sco",
+    mapsEmbedUrl: `https://maps.google.com/maps?q=${addressCoords.lat},${addressCoords.lng}&hl=es&z=17&output=embed`,
   },
 
   social: {

@@ -17,9 +17,9 @@ export function LocationMap({ compact = false }: { compact?: boolean }) {
           className="pointer-events-none h-64 w-full border-0 md:h-80"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
+          allowFullScreen
           title="Ubicación de Exento en Google Maps"
           tabIndex={-1}
-          aria-hidden
         />
         <a
           href={siteConfig.address.mapUrl}
