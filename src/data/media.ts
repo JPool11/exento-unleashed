@@ -10,8 +10,8 @@ function unsplash(id: string, width = 1600) {
 
 export const media = {
   hero: {
-    src: unsplash("photo-1514933651103-005eec06c04b", 1920),
-    alt: "Interior nocturno de un gastrobar con iluminación cálida — imagen temporal",
+    src: "/exento-hero.jpg",
+    alt: "Fachada nocturna de Exento con letrero iluminado, entrada y jardín",
     // TODO: video cinematográfico oficial de Exento
     video: undefined as string | undefined,
   },
