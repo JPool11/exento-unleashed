@@ -3,7 +3,7 @@ import { useRouterState } from "@tanstack/react-router";
 import { AmbientBackground } from "@/components/layout/AmbientBackground";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { FloatingWhatsApp } from "@/components/layout/FloatingWhatsApp";
+import { FloatingActions } from "@/components/layout/FloatingActions";
 import { ReservationProvider } from "@/components/reservation/reservation-context";
 import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
@@ -11,7 +11,7 @@ import { CalendarDays, UtensilsCrossed } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 
 const BARE_PATHS = new Set(["/mantenimiento"]);
-const HIDE_CHROME_EXTRAS = new Set(["/mantenimiento", "/404", "/error"]);
+const HIDE_MOBILE_DOCK = new Set(["/mantenimiento", "/404", "/error"]);
 
 export function SiteChrome({ children }: { children: ReactNode }) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
@@ -26,8 +26,8 @@ export function SiteChrome({ children }: { children: ReactNode }) {
           {children}
         </div>
         {!bare ? <Footer /> : null}
-        {!HIDE_CHROME_EXTRAS.has(pathname) ? <FloatingWhatsApp /> : null}
-        {!HIDE_CHROME_EXTRAS.has(pathname) ? <MobileDock /> : null}
+        <FloatingActions />
+        {!HIDE_MOBILE_DOCK.has(pathname) ? <MobileDock /> : null}
         <Toaster />
       </div>
     </ReservationProvider>

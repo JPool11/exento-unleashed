@@ -5,7 +5,6 @@ export const mainNav = [
   { label: "Eventos", to: "/eventos" },
   { label: "Nosotros", to: "/nosotros" },
   { label: "Contacto", to: "/contacto" },
-  { label: "Carta", to: "/carta" },
 ] as const;
 
 export const footerNav = mainNav;
