@@ -10,33 +10,206 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as R404RouteImport } from './routes/404'
+import { Route as CartaRouteImport } from './routes/carta'
+import { Route as ContactoRouteImport } from './routes/contacto'
+import { Route as ErrorRouteImport } from './routes/error'
+import { Route as EspaciosRouteImport } from './routes/espacios'
+import { Route as GaleriaRouteImport } from './routes/galeria'
+import { Route as MantenimientoRouteImport } from './routes/mantenimiento'
+import { Route as NosotrosRouteImport } from './routes/nosotros'
+import { Route as EventosIndexRouteImport } from './routes/eventos/index'
+import { Route as EventosCategoriaRouteImport } from './routes/eventos/$categoria'
+import { Route as ReservarIndexRouteImport } from './routes/reservar/index'
+import { Route as ReservarEventoRouteImport } from './routes/reservar/evento'
+import { Route as ReservarMesaRouteImport } from './routes/reservar/mesa'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const R404Route = R404RouteImport.update({
+  id: '/404',
+  path: '/404',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CartaRoute = CartaRouteImport.update({
+  id: '/carta',
+  path: '/carta',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactoRoute = ContactoRouteImport.update({
+  id: '/contacto',
+  path: '/contacto',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErrorRoute = ErrorRouteImport.update({
+  id: '/error',
+  path: '/error',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EspaciosRoute = EspaciosRouteImport.update({
+  id: '/espacios',
+  path: '/espacios',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GaleriaRoute = GaleriaRouteImport.update({
+  id: '/galeria',
+  path: '/galeria',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MantenimientoRoute = MantenimientoRouteImport.update({
+  id: '/mantenimiento',
+  path: '/mantenimiento',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NosotrosRoute = NosotrosRouteImport.update({
+  id: '/nosotros',
+  path: '/nosotros',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EventosIndexRoute = EventosIndexRouteImport.update({
+  id: '/eventos/',
+  path: '/eventos/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EventosCategoriaRoute = EventosCategoriaRouteImport.update({
+  id: '/eventos/$categoria',
+  path: '/eventos/$categoria',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReservarIndexRoute = ReservarIndexRouteImport.update({
+  id: '/reservar/',
+  path: '/reservar/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReservarEventoRoute = ReservarEventoRouteImport.update({
+  id: '/reservar/evento',
+  path: '/reservar/evento',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReservarMesaRoute = ReservarMesaRouteImport.update({
+  id: '/reservar/mesa',
+  path: '/reservar/mesa',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/404': typeof R404Route
+  '/carta': typeof CartaRoute
+  '/contacto': typeof ContactoRoute
+  '/error': typeof ErrorRoute
+  '/espacios': typeof EspaciosRoute
+  '/galeria': typeof GaleriaRoute
+  '/mantenimiento': typeof MantenimientoRoute
+  '/nosotros': typeof NosotrosRoute
+  '/eventos/$categoria': typeof EventosCategoriaRoute
+  '/reservar/evento': typeof ReservarEventoRoute
+  '/reservar/mesa': typeof ReservarMesaRoute
+  '/eventos/': typeof EventosIndexRoute
+  '/reservar/': typeof ReservarIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/404': typeof R404Route
+  '/carta': typeof CartaRoute
+  '/contacto': typeof ContactoRoute
+  '/error': typeof ErrorRoute
+  '/espacios': typeof EspaciosRoute
+  '/galeria': typeof GaleriaRoute
+  '/mantenimiento': typeof MantenimientoRoute
+  '/nosotros': typeof NosotrosRoute
+  '/eventos/$categoria': typeof EventosCategoriaRoute
+  '/reservar/evento': typeof ReservarEventoRoute
+  '/reservar/mesa': typeof ReservarMesaRoute
+  '/eventos': typeof EventosIndexRoute
+  '/reservar': typeof ReservarIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/404': typeof R404Route
+  '/carta': typeof CartaRoute
+  '/contacto': typeof ContactoRoute
+  '/error': typeof ErrorRoute
+  '/espacios': typeof EspaciosRoute
+  '/galeria': typeof GaleriaRoute
+  '/mantenimiento': typeof MantenimientoRoute
+  '/nosotros': typeof NosotrosRoute
+  '/eventos/$categoria': typeof EventosCategoriaRoute
+  '/reservar/evento': typeof ReservarEventoRoute
+  '/reservar/mesa': typeof ReservarMesaRoute
+  '/eventos/': typeof EventosIndexRoute
+  '/reservar/': typeof ReservarIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/404'
+    | '/carta'
+    | '/contacto'
+    | '/error'
+    | '/espacios'
+    | '/galeria'
+    | '/mantenimiento'
+    | '/nosotros'
+    | '/eventos/$categoria'
+    | '/reservar/evento'
+    | '/reservar/mesa'
+    | '/eventos/'
+    | '/reservar/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/404'
+    | '/carta'
+    | '/contacto'
+    | '/error'
+    | '/espacios'
+    | '/galeria'
+    | '/mantenimiento'
+    | '/nosotros'
+    | '/eventos/$categoria'
+    | '/reservar/evento'
+    | '/reservar/mesa'
+    | '/eventos'
+    | '/reservar'
+  id:
+    | '__root__'
+    | '/'
+    | '/404'
+    | '/carta'
+    | '/contacto'
+    | '/error'
+    | '/espacios'
+    | '/galeria'
+    | '/mantenimiento'
+    | '/nosotros'
+    | '/eventos/$categoria'
+    | '/reservar/evento'
+    | '/reservar/mesa'
+    | '/eventos/'
+    | '/reservar/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  R404Route: typeof R404Route
+  CartaRoute: typeof CartaRoute
+  ContactoRoute: typeof ContactoRoute
+  ErrorRoute: typeof ErrorRoute
+  EspaciosRoute: typeof EspaciosRoute
+  GaleriaRoute: typeof GaleriaRoute
+  MantenimientoRoute: typeof MantenimientoRoute
+  NosotrosRoute: typeof NosotrosRoute
+  EventosCategoriaRoute: typeof EventosCategoriaRoute
+  ReservarEventoRoute: typeof ReservarEventoRoute
+  ReservarMesaRoute: typeof ReservarMesaRoute
+  EventosIndexRoute: typeof EventosIndexRoute
+  ReservarIndexRoute: typeof ReservarIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +221,115 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/404': {
+      id: '/404'
+      path: '/404'
+      fullPath: '/404'
+      preLoaderRoute: typeof R404RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/carta': {
+      id: '/carta'
+      path: '/carta'
+      fullPath: '/carta'
+      preLoaderRoute: typeof CartaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contacto': {
+      id: '/contacto'
+      path: '/contacto'
+      fullPath: '/contacto'
+      preLoaderRoute: typeof ContactoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/error': {
+      id: '/error'
+      path: '/error'
+      fullPath: '/error'
+      preLoaderRoute: typeof ErrorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/espacios': {
+      id: '/espacios'
+      path: '/espacios'
+      fullPath: '/espacios'
+      preLoaderRoute: typeof EspaciosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/galeria': {
+      id: '/galeria'
+      path: '/galeria'
+      fullPath: '/galeria'
+      preLoaderRoute: typeof GaleriaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mantenimiento': {
+      id: '/mantenimiento'
+      path: '/mantenimiento'
+      fullPath: '/mantenimiento'
+      preLoaderRoute: typeof MantenimientoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nosotros': {
+      id: '/nosotros'
+      path: '/nosotros'
+      fullPath: '/nosotros'
+      preLoaderRoute: typeof NosotrosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/eventos/': {
+      id: '/eventos/'
+      path: '/eventos'
+      fullPath: '/eventos/'
+      preLoaderRoute: typeof EventosIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/eventos/$categoria': {
+      id: '/eventos/$categoria'
+      path: '/eventos/$categoria'
+      fullPath: '/eventos/$categoria'
+      preLoaderRoute: typeof EventosCategoriaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reservar/': {
+      id: '/reservar/'
+      path: '/reservar'
+      fullPath: '/reservar/'
+      preLoaderRoute: typeof ReservarIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reservar/evento': {
+      id: '/reservar/evento'
+      path: '/reservar/evento'
+      fullPath: '/reservar/evento'
+      preLoaderRoute: typeof ReservarEventoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reservar/mesa': {
+      id: '/reservar/mesa'
+      path: '/reservar/mesa'
+      fullPath: '/reservar/mesa'
+      preLoaderRoute: typeof ReservarMesaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  R404Route: R404Route,
+  CartaRoute: CartaRoute,
+  ContactoRoute: ContactoRoute,
+  ErrorRoute: ErrorRoute,
+  EspaciosRoute: EspaciosRoute,
+  GaleriaRoute: GaleriaRoute,
+  MantenimientoRoute: MantenimientoRoute,
+  NosotrosRoute: NosotrosRoute,
+  EventosCategoriaRoute: EventosCategoriaRoute,
+  ReservarEventoRoute: ReservarEventoRoute,
+  ReservarMesaRoute: ReservarMesaRoute,
+  EventosIndexRoute: EventosIndexRoute,
+  ReservarIndexRoute: ReservarIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
