@@ -7,9 +7,9 @@ import { WhatsAppIcon } from "@/components/layout/SocialIcons";
 import { cn } from "@/lib/utils";
 
 const fabClass =
-  "flex h-12 items-center gap-2.5 rounded-full border border-gold-soft/60 bg-background/90 px-4 shadow-[0_8px_30px_oklch(0.14_0.01_40/0.45)] backdrop-blur-md transition-[transform,border-color] duration-300 hover:scale-[1.02] hover:border-gold";
+  "flex size-12 items-center justify-center gap-2.5 rounded-full border border-gold-soft/60 bg-background/90 shadow-[0_8px_30px_oklch(0.14_0.01_40/0.45)] backdrop-blur-md transition-[transform,border-color] duration-300 hover:scale-[1.02] hover:border-gold md:h-12 md:w-auto md:justify-start md:px-4";
 
-const labelClass = "font-sans text-[10px] uppercase tracking-[0.22em] text-ivory";
+const labelClass = "hidden font-sans text-[10px] uppercase tracking-[0.22em] text-ivory md:inline";
 
 export function FloatingActions() {
   const whatsappHref = hasWhatsApp() ? getWhatsAppUrl() : siteConfig.social.instagram;

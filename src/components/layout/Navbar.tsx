@@ -83,14 +83,13 @@ export function Navbar() {
 
         <button
           type="button"
-          className="flex items-center gap-3 text-gold lg:hidden"
+          className="flex size-11 items-center justify-center text-gold lg:hidden"
           aria-label="Abrir menú"
           onClick={() => setOpen(true)}
         >
-          <span className="font-sans text-[10px] uppercase tracking-[0.32em]">Menú</span>
-          <span className="flex flex-col gap-1.5" aria-hidden>
+          <span className="flex flex-col items-end gap-1.5" aria-hidden>
             <span className="h-px w-6 bg-gold" />
-            <span className="h-px w-4 bg-gold-soft self-end" />
+            <span className="h-px w-4 bg-gold-soft" />
           </span>
         </button>
       </div>

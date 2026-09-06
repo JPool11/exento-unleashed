@@ -43,7 +43,7 @@ export const media = {
       alt: "Plato de cocina contemporánea — imagen temporal",
     },
     grill: {
-      src: unsplash("photo-1544025162-d76690232d66", 1400),
+      src: unsplash("photo-1555939594-58d7cb561ad1", 1400),
       alt: "Preparación a la parrilla — imagen temporal",
     },
     cocktail: {
@@ -55,13 +55,13 @@ export const media = {
       alt: "Bartender preparando una bebida — imagen temporal",
     },
     table: {
-      src: unsplash("photo-1424847651672-bf20a4b2726a", 1400),
+      src: unsplash("photo-1552566626-52f8b828add9", 1400),
       alt: "Mesa compartida en un restaurante — imagen temporal",
     },
   },
   events: {
     cumpleanos: {
-      src: unsplash("photo-1464349095431-bbdf18b25aa2", 1400),
+      src: unsplash("photo-1530103862676-de8c9debad1d", 1400),
       alt: "Celebración de cumpleaños — imagen temporal",
     },
     matrimonios: {
@@ -73,11 +73,11 @@ export const media = {
       alt: "Celebración formal — imagen temporal",
     },
     grados: {
-      src: unsplash("photo-1523050854058-8df90110c9f1", 1400),
+      src: unsplash("photo-1541339907198-e08756dedf3f", 1400),
       alt: "Celebración de grado — imagen temporal",
     },
     aniversarios: {
-      src: unsplash("photo-1522673607200-164e1b6ac4e1", 1400),
+      src: unsplash("photo-1511795409834-ef04bbd61622", 1400),
       alt: "Cena de aniversario — imagen temporal",
     },
     bautizos: {
