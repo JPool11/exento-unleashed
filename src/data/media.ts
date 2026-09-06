@@ -43,7 +43,7 @@ export const media = {
       alt: "Plato de cocina contemporánea — imagen temporal",
     },
     grill: {
-      src: unsplash("photo-1544025162-d76690232d66", 1400),
+      src: unsplash("photo-1555939594-58d7cb561ad1", 1400),
       alt: "Preparación a la parrilla — imagen temporal",
     },
     cocktail: {
@@ -61,7 +61,7 @@ export const media = {
   },
   events: {
     cumpleanos: {
-      src: unsplash("photo-1464349095431-bbdf18b25aa2", 1400),
+      src: unsplash("photo-1530103862676-de8c9debad1d", 1400),
       alt: "Celebración de cumpleaños — imagen temporal",
     },
     matrimonios: {
