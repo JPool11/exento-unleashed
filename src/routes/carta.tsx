@@ -82,7 +82,7 @@ function CartaPage() {
         </div>
       </section>
 
-      <section id="menu-seccion" className="mx-auto max-w-3xl px-6 pb-24 md:px-14">
+      <section id="menu-seccion" className="mx-auto max-w-3xl scroll-mt-36 px-6 pb-24 md:px-14">
         <SectionHeading>{category?.name}</SectionHeading>
         <p className="mt-3 text-sm text-muted-ink">{category?.description}</p>
         <div className="mt-10 divide-y divide-gold-soft/20 border-y border-gold-soft/20">

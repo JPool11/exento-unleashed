@@ -19,7 +19,7 @@ export function SiteChrome({ children }: { children: ReactNode }) {
 
   return (
     <ReservationProvider>
-      <div className="relative min-h-screen overflow-x-hidden bg-background text-foreground">
+      <div className="relative min-h-screen overflow-x-clip bg-background text-foreground">
         <AmbientBackground />
         {!bare ? <Navbar /> : null}
         <div id="contenido" className={cn("relative z-10", !bare && "pb-16 md:pb-0")}>
