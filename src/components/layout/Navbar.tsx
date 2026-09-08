@@ -35,7 +35,7 @@ export function Navbar() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-500",
         scrolled
-          ? "border-b border-gold-soft/20 bg-background/80 backdrop-blur-md"
+          ? "border-b border-gold-soft/20 bg-background/95 backdrop-blur-xl"
           : "border-b border-transparent bg-transparent",
       )}
     >
@@ -45,7 +45,7 @@ export function Navbar() {
       >
         Saltar al contenido
       </a>
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-6 px-5 md:px-10">
+      <div className="mx-auto flex h-16 max-w-7xl md:h-20 items-center justify-between gap-6 px-5 md:px-10">
         <Link to="/" aria-label={`${siteConfig.name} — inicio`} className="shrink-0">
           <BrandMark />
         </Link>
