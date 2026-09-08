@@ -81,7 +81,7 @@ export function HomeIntro() {
     <section id="introduccion" className="px-6 py-24 md:px-14 md:py-32">
       <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-12">
         <Reveal className="lg:col-span-5">
-          
+          <Eyebrow className="justify-start">Exento · Sin reglas</Eyebrow>
           <SectionHeading>Hay noches que se olvidan. Otras se celebran en Exento.</SectionHeading>
           <p className="mt-6 max-w-md text-sm leading-relaxed text-muted-ink">
             Combinamos cocina, coctelería, ambiente y celebración en un mismo lugar. Un gastrobar
