@@ -86,6 +86,7 @@ export function HomeHero() {
                 {siteConfig.name} · {siteConfig.tagline}
               </h1>
               <img
+                ref={heroLogoRef}
                 src={siteConfig.logos.wordmarkLight}
                 alt={`${siteConfig.name} — ${siteConfig.tagline} · Gastrobar, restaurante y espacio de eventos en ${siteConfig.address.city}, ${siteConfig.address.department}`}
                 width={420}
