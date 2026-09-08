@@ -62,13 +62,19 @@ export function HomeHero() {
             </div>
 
             <div className="order-1 flex flex-col items-end text-right md:order-2">
-              <p className="font-sans text-[10px] uppercase tracking-[0.5em] text-gold">
+              <h1 className="font-sans text-[10px] uppercase tracking-[0.5em] text-gold">
                 {siteConfig.name} · {siteConfig.tagline}
-              </p>
-              <h1 className="mt-6 font-display text-6xl font-light tracking-wide text-ivory md:text-8xl">
-                {siteConfig.name}
               </h1>
-              <p className="mt-3 font-display text-2xl italic text-gold md:text-3xl">{siteConfig.tagline}</p>
+              <img
+                src={siteConfig.logos.wordmarkLight}
+                alt={`${siteConfig.name} — ${siteConfig.tagline} · Gastrobar, restaurante y espacio de eventos en ${siteConfig.address.city}, ${siteConfig.address.department}`}
+                width={420}
+                height={180}
+                className="mt-6 w-56 max-w-full md:w-80 lg:w-96"
+                fetchPriority="high"
+                decoding="async"
+              />
+              <p className="sr-only">{siteConfig.description}</p>
             </div>
           </div>
 
