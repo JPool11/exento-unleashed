@@ -156,7 +156,7 @@
   html {
     scroll-behavior: smooth;
     /* Offset for the fixed navbar (h-20) so anchored content never hides below it */
-    scroll-padding-top: 6rem;
+    scroll-padding-top: 5.5rem;
   }
 
   @media (min-width: 768px) {
