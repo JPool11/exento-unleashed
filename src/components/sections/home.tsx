@@ -42,36 +42,42 @@ export function HomeHero() {
         />
       </div>
 
-      <div className="relative z-10 flex min-h-[100svh] flex-col px-6 pb-16 pt-28 text-center md:pt-32">
-        <div className="my-auto flex flex-col items-center">
-        <p className="font-sans text-[10px] uppercase tracking-[0.5em] text-gold">
-          {siteConfig.name} · {siteConfig.tagline}
-        </p>
-        <h1 className="mt-6 font-display text-6xl font-light tracking-wide text-ivory md:text-8xl">
-          {siteConfig.name}
-        </h1>
-        <p className="mt-3 font-display text-2xl italic text-gold md:text-3xl">{siteConfig.tagline}</p>
-        <p className="mt-8 max-w-xl font-display text-xl leading-relaxed text-ivory md:text-2xl">
-          Gastronomía, coctelería y celebraciones sin reglas.
-        </p>
-        <p className="mt-4 max-w-lg text-sm leading-relaxed text-muted-ink">
-          Un lugar para comer, brindar, celebrar y convertir cualquier momento en una experiencia.
-        </p>
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-          <ReserveTableLink />
-          <QuoteEventLink />
-        </div>
-        <div className="mt-8">
-          <MenuLink />
-        </div>
-        <a
-          href="#introduccion"
-          className="mt-10 inline-flex flex-col items-center gap-2 text-gold md:mt-16"
-          aria-label="Desplazarse al contenido"
-        >
-          <span className="font-sans text-[10px] uppercase tracking-[0.42em]">Descubrir</span>
-          <ArrowDown className="size-4 animate-bounce motion-reduce:animate-none" />
-        </a>
+      <div className="relative z-10 flex min-h-[100svh] flex-col px-6 pb-16 pt-28 md:pt-32">
+        <div className="my-auto flex w-full flex-col">
+          <div className="flex flex-col items-end text-right">
+            <p className="font-sans text-[10px] uppercase tracking-[0.5em] text-gold">
+              {siteConfig.name} · {siteConfig.tagline}
+            </p>
+            <h1 className="mt-6 font-display text-6xl font-light tracking-wide text-ivory md:text-8xl">
+              {siteConfig.name}
+            </h1>
+            <p className="mt-3 font-display text-2xl italic text-gold md:text-3xl">{siteConfig.tagline}</p>
+          </div>
+
+          <div className="mt-10 flex flex-col items-start md:mt-14">
+            <p className="max-w-xl font-display text-xl leading-relaxed text-ivory md:text-2xl">
+              Gastronomía, coctelería y celebraciones sin reglas.
+            </p>
+            <p className="mt-4 max-w-lg text-sm leading-relaxed text-muted-ink">
+              Un lugar para comer, brindar, celebrar y convertir cualquier momento en una experiencia.
+            </p>
+            <div className="mt-10 flex flex-wrap items-center gap-3">
+              <ReserveTableLink />
+              <QuoteEventLink />
+            </div>
+            <div className="mt-8">
+              <MenuLink />
+            </div>
+          </div>
+
+          <a
+            href="#introduccion"
+            className="mt-10 inline-flex flex-col items-center gap-2 self-center text-gold md:mt-16"
+            aria-label="Desplazarse al contenido"
+          >
+            <span className="font-sans text-[10px] uppercase tracking-[0.42em]">Descubrir</span>
+            <ArrowDown className="size-4 animate-bounce motion-reduce:animate-none" />
+          </a>
         </div>
       </div>
     </section>
