@@ -17,6 +17,7 @@ export function Navbar() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [heroLogoVisible, setHeroLogoVisible] = useState(pathname === "/");
   const { openDialog } = useReservationDialog();
 
   useEffect(() => {
@@ -28,7 +29,17 @@ export function Navbar() {
 
   useEffect(() => {
     setOpen(false);
+    setHeroLogoVisible(false);
   }, [pathname]);
+
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const detail = (e as CustomEvent).detail as { visible?: boolean } | undefined;
+      setHeroLogoVisible(Boolean(detail?.visible));
+    };
+    window.addEventListener("heroLogoVisibility", handler);
+    return () => window.removeEventListener("heroLogoVisibility", handler);
+  }, []);
 
   return (
     <header
@@ -46,7 +57,14 @@ export function Navbar() {
         Saltar al contenido
       </a>
       <div className="mx-auto flex h-16 max-w-7xl md:h-20 items-center justify-between gap-6 px-5 md:px-10">
-        <Link to="/" aria-label={`${siteConfig.name} — inicio`} className="shrink-0">
+        <Link
+          to="/"
+          aria-label={`${siteConfig.name} — inicio`}
+          className={cn(
+            "shrink-0 transition-opacity duration-500",
+            heroLogoVisible && "pointer-events-none opacity-0",
+          )}
+        >
           <BrandMark />
         </Link>
 

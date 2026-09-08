@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowDown, ArrowRight, ChevronRight } from "lucide-react";
 import { siteConfig } from "@/config/site";
@@ -16,6 +17,25 @@ import { SocialLinks } from "@/components/layout/SocialLinks";
 import { cn } from "@/lib/utils";
 
 export function HomeHero() {
+  const heroLogoRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    const el = heroLogoRef.current;
+    if (!el || typeof window === "undefined") return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        window.dispatchEvent(
+          new CustomEvent("heroLogoVisibility", { detail: { visible: entry.isIntersecting } }),
+        );
+      },
+      { threshold: 0, rootMargin: "-80px 0px 0px 0px" },
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="relative isolate min-h-[100svh] overflow-hidden">
       <div className="absolute inset-0">
@@ -66,6 +86,7 @@ export function HomeHero() {
                 {siteConfig.name} · {siteConfig.tagline}
               </h1>
               <img
+                ref={heroLogoRef}
                 src={siteConfig.logos.wordmarkLight}
                 alt={`${siteConfig.name} — ${siteConfig.tagline} · Gastrobar, restaurante y espacio de eventos en ${siteConfig.address.city}, ${siteConfig.address.department}`}
                 width={420}
