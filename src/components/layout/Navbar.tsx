@@ -17,7 +17,7 @@ export function Navbar() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const [heroLogoVisible, setHeroLogoVisible] = useState(false);
+  const [heroLogoVisible, setHeroLogoVisible] = useState(pathname === "/");
   const { openDialog } = useReservationDialog();
 
   useEffect(() => {
