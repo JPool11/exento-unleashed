@@ -65,23 +65,23 @@ export function HomeHero() {
       <div className="relative z-10 flex min-h-[100svh] flex-col px-6 pb-16 pt-28 md:pt-32">
         <div className="my-auto flex w-full flex-col">
           <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-8">
-            <div className="order-2 flex flex-col items-start md:order-1">
+            <div className="order-2 flex flex-col items-center text-center md:order-1 md:items-start md:text-left">
               <p className="max-w-xl font-display text-xl leading-relaxed text-ivory md:text-2xl">
                 Gastronomía, coctelería y celebraciones sin reglas.
               </p>
               <p className="mt-4 max-w-lg text-sm leading-relaxed text-muted-ink">
                 Un lugar para comer, brindar, celebrar y convertir cualquier momento en una experiencia.
               </p>
-              <div className="mt-10 flex flex-wrap items-center gap-3">
+              <div className="mt-10 flex flex-wrap items-center justify-center gap-3 md:justify-start">
                 <ReserveTableLink />
                 <QuoteEventLink />
               </div>
-              <div className="mt-8">
+              <div className="mt-8 flex w-full justify-center md:justify-start">
                 <MenuLink />
               </div>
             </div>
 
-            <div className="order-1 flex flex-col items-end text-right md:order-2">
+            <div className="order-1 flex flex-col items-center text-center md:order-2 md:items-end md:text-right">
               <h1 className="font-sans text-[10px] uppercase tracking-[0.5em] text-gold">
                 {siteConfig.name} · {siteConfig.tagline}
               </h1>
