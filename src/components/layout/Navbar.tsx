@@ -57,7 +57,14 @@ export function Navbar() {
         Saltar al contenido
       </a>
       <div className="mx-auto flex h-16 max-w-7xl md:h-20 items-center justify-between gap-6 px-5 md:px-10">
-        <Link to="/" aria-label={`${siteConfig.name} — inicio`} className="shrink-0">
+        <Link
+          to="/"
+          aria-label={`${siteConfig.name} — inicio`}
+          className={cn(
+            "shrink-0 transition-opacity duration-500",
+            heroLogoVisible && "pointer-events-none opacity-0",
+          )}
+        >
           <BrandMark />
         </Link>
 
