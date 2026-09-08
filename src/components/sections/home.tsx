@@ -29,7 +29,7 @@ export function HomeHero() {
           new CustomEvent("heroLogoVisibility", { detail: { visible: entry.isIntersecting } }),
         );
       },
-      { threshold: 0 },
+      { threshold: 0, rootMargin: "-80px 0px 0px 0px" },
     );
 
     observer.observe(el);
