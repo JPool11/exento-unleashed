@@ -42,7 +42,8 @@ export function HomeHero() {
         />
       </div>
 
-      <div className="relative z-10 flex min-h-[100svh] flex-col items-center justify-center px-6 text-center">
+      <div className="relative z-10 flex min-h-[100svh] flex-col px-6 pb-16 pt-28 text-center md:pt-32">
+        <div className="my-auto flex flex-col items-center">
         <p className="font-sans text-[10px] uppercase tracking-[0.5em] text-gold">
           {siteConfig.name} · {siteConfig.tagline}
         </p>
@@ -65,12 +66,13 @@ export function HomeHero() {
         </div>
         <a
           href="#introduccion"
-          className="mt-16 inline-flex flex-col items-center gap-2 text-gold"
+          className="mt-10 inline-flex flex-col items-center gap-2 text-gold md:mt-16"
           aria-label="Desplazarse al contenido"
         >
           <span className="font-sans text-[10px] uppercase tracking-[0.42em]">Descubrir</span>
           <ArrowDown className="size-4 animate-bounce motion-reduce:animate-none" />
         </a>
+        </div>
       </div>
     </section>
   );
