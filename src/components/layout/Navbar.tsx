@@ -17,6 +17,7 @@ export function Navbar() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [heroLogoVisible, setHeroLogoVisible] = useState(false);
   const { openDialog } = useReservationDialog();
 
   useEffect(() => {
@@ -28,7 +29,17 @@ export function Navbar() {
 
   useEffect(() => {
     setOpen(false);
+    setHeroLogoVisible(false);
   }, [pathname]);
+
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const detail = (e as CustomEvent).detail as { visible?: boolean } | undefined;
+      setHeroLogoVisible(Boolean(detail?.visible));
+    };
+    window.addEventListener("heroLogoVisibility", handler);
+    return () => window.removeEventListener("heroLogoVisibility", handler);
+  }, []);
 
   return (
     <header
